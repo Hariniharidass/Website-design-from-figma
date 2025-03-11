@@ -3,5 +3,436 @@
 $primary-font: "Josefin Sans", sans-serif;
 $secondary-font: "Aleo", serif;
 $text-color: #FFFFFF;
+$text-secondary-color: #E8E8E8;
 $main-button-color: #5474FD;
 $mixed-button-color: #496BFE;
+$background-color: #333333;
+$card-background-color: #232323;
+
+body {
+    color: $text-color;
+}
+
+.landing-page {
+    background-image: url(../images/hero.png);
+    background-color: #000000;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    position: absolute;
+    top: 30%;
+}
+
+.name {
+    color: $text-color;
+    text-align: center;
+    vertical-align: text-middle;
+    font-size: 38px;
+    font-family: $primary-font;
+    letter-spacing: 4.8px;
+    line-height: 26px;
+    border-style: hidden;
+    outline: none;
+
+}
+
+.tag-line {
+    position: relative;
+    top: -15px;
+    color: $text-color;
+    text-align: center;
+    vertical-align: text-middle;
+    font-size: 22px;
+    font-family: $primary-font;
+    letter-spacing: 6.8px;
+    line-height: 26px;
+    border-style: hidden;
+    outline: none;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+}
+
+.search-box {
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: 0;
+    width: 40vw;
+    height: 60px;
+}
+
+.search-input {
+    flex: 3;
+    border: none;
+    outline: none;
+    margin: none;
+
+    &::placeholder {
+        color: #999999;
+        text-align: center;
+        vertical-align: text-middle;
+        font-size: 14px;
+        font-family: $primary-font;
+        letter-spacing: 2.8px;
+        line-height: 26px;
+    }
+
+    &:hover {
+        cursor: text;
+    }
+
+    &:focus {
+        background-color: $text-color;
+        color: $main-button-color;
+        text-align: center;
+    }
+}
+
+.search-button {
+    flex: 1;
+    color: $text-color;
+    background-color: $main-button-color;
+    text-align: center;
+    vertical-align: text-middle;
+    font-size: 14px;
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 1.4px;
+    border: 2px solid $text-color;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $text-color;
+    }
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+}
+
+.transparent-button {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    color: $text-color;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav-bar {
+    display: inline-flex;
+    background-color: $main-button-color;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+
+    .title {
+
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        align-items: center;
+        letter-spacing: 2.4px;
+        color: $text-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .links {
+        list-style-type: none;
+        display: inline-flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 40%;
+
+        li {
+            a {
+                color: $text-color;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    display: block;
+                    background-color: $text-color;
+                    color: $main-button-color;
+                }
+            }
+        }
+    }
+}
+
+.why-us-page {
+    background-image: url("../images/city-view.png");
+    background-color: #000000;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    row-gap: 15px;
+    position: relative;
+    left: 10%;
+}
+
+.why-title {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 26px;
+    align-items: flex-start;
+    text-align: left;
+    color: $text-color;
+}
+
+.why-content {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+    text-align: left;
+    letter-spacing: 1.6px;
+    width: 560px;
+    color: $text-secondary-color;
+}
+
+.button {
+    width: 110px;
+    height: 90px;
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+    align-items: flex-start;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    width: 228px;
+    height: 63px;
+    color: $text-color;
+    z-index: 9999;
+    border: none;
+}
+
+.main-button {
+    background-color: $main-button-color;
+}
+
+.mixed-button {
+    background-color: $mixed-button-color;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    position: relative;
+    left: 5%;
+}
+
+.small-images {
+    width: 350px;
+    height: 220px;
+
+}
+
+.push-right {
+    position: relative;
+    left: 12%;
+}
+
+.arch-diagram {
+    background-color: $background-color;
+    height: 340px;
+    width: 100vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-row {
+    z-index: 999;
+    position: relative;
+    top: -3%;
+    width: 85%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tick {
+    position: relative;
+    left: 0.5%;
+    background-color: $background-color;
+    z-index: 9999999;
+}
+
+.text-row {
+    width: 85%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.arch-text {
+
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 26px;
+    /* identical to box height, or 72% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: $text-secondary-color;
+}
+
+.spain-villa {
+    background-image: url("../images/modern-house.png");
+    background-color: #000000;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card {
+    background-color: $card-background-color;
+    opacity: 90%;
+    width: 500px;
+    height: 374px;
+    position: relative;
+    left: -19%;
+    top: 10%;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card-tag {
+
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.5px;
+
+    color: $text-secondary-color;
+}
+
+.card-name {
+
+
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: $text-color;
+}
+
+.card-content {
+
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+    display: flex;
+    align-items: center;
+
+    color: $text-secondary-color;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.sea-view {
+    background-image: url("../images/sea-view.png");
+    background-color: #000000;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right {
+    position: relative;
+    left: 15%;
+}
+
+.testimonial {
+    background-image: url("../images/man-stepping-on-a-rock.png");
+    background-color: #000000;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

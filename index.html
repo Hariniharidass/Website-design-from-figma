@@ -29,9 +29,9 @@
         </header>
         <section class="search-container">
             <div class="search-box">
-                <input type="text" name="search" id="search" class="search-input"
-                    placeholder="Search Your Travel Destination">
-                <button class="search-button">SEARCH <i class="fa fa-search" aria-hidden="true"></i></button>
+                    <input type="text" name="search" id="search" class="search-input"
+                        placeholder="Search Your Travel Destination" required autofocus>
+                    <button class="search-button">SEARCH <i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </section>
         <section class="scroll-container">
@@ -42,19 +42,22 @@
     </article>
     <nav class="nav-bar">
         <header class="title">BHROMOAN</header>
-        <ul class="links">
+        <ul class="links" id="nav-link">
             <li>
-                <a href="">WHO WE ARE</a>
+                <a href="#">WHO WE ARE</a>
             </li>
             <li>
-                <a href="">WHAT WE DO</a>
+                <a href="#">WHAT WE DO</a>
             </li>
             <li>
-                <a href="">TRAVEL WITH US</a>
+                <a href="#">TRAVEL WITH US</a>
             </li>
             <li>
-                <a href="">CONTACT US</a>
+                <a href="#">CONTACT US</a>
             </li>
+            <a class="nav-icon" onclick="burgerMenu()">
+                <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+            </a>
         </ul>
     </nav>
     <article class="why-us-page">
@@ -135,16 +138,26 @@
         </section>
     </article>
     <footer class="footer">
-        <header class="title">BHROMAON</header>
+        <p class="title">BHROMAON</p>
         <p class="tag-line footer-tag">Safe Travel Anywhere</p>
         <section class="social-media-icons">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-linkedin quotes" aria-hidden="true"></i>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-            <i class="fa fa-pinterest" aria-hidden="true"></i>
+            <a href="#"> <i class="fa fa-facebook media" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-twitter media" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-linkedin quotes media" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-youtube-play media" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-pinterest media" aria-hidden="true"></i></a>
         </section>
     </footer>
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-link");
+            if (burger.className === "links") {
+                burger.className += " responsive";
+            } else {
+                burger.className = "links";
+            }
+        }
+    </script>
 </body>
 
 </html>

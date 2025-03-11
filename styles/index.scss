@@ -434,5 +434,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.testimonial-card {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    column-gap: 30px;
+}
+
+.testimonial-image {
+    width: 445px;
+    height: 284px;
+
+}
+
+.testimonial-text {
+    height: 286px;
+    width: 41%;
+    padding-top: 50px;
+}
+
+.testimonial-header {
+
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 26px;
+    /* identical to box height, or 72% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: $text-color;
+}
+
+.testimony {
+    display: inline;
+    margin: 0;
+    line-height: 34px;
+
+
+}
+
+.quotes {
+    color: $main-button-color;
 }
